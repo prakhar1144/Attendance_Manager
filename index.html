@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Attendance Register</title>
+    <title>Attendance Register</title>
+    <link rel="shortcut icon" href="Images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <meta charset="UTF-8">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/indicator.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     
 
 </head>
@@ -17,10 +20,12 @@
      <div class="bg bg2"></div>
      <div class="bg bg3"></div>
      <div id="spn">
-		 <h1>WELCOME<br>TO<br>ATTENDANCE MANAGER</h1>
-		 <br>
-		 <h2 ><strong><i fa fa-lg fa-arrow-right></i><a id="loginBtn" >Click Here to Login</a></strong></h2>
-     </div> 
+		 <div>
+            <h1>WELCOME<br>TO<br>ATTENDANCE MANAGER</h1>
+            <br>
+            <h1 ><strong><i fa fa-lg fa-user></i><a id="loginBtn" >Login</a>|<a id="registerBtn" >Register</a></strong></h1>
+         </div>
+	 </div> 
 	 <div id="login" class="modal fade appearance" role="dialog">
         <div class="modal-dialog modal-lg "  role="content">
             <div class="modal-content">
@@ -32,12 +37,12 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                <label class="sr-only" for="inputemail">Email Address</label>
-                                <input type="text" class="form-control form-control-sm mr-1" id="inputemail" name="inputemail" placeholder="Enter Roll No."> 
+                                <label class="sr-only" for="inputemail">Roll No.</label>
+                                <input type="text" class="form-control form-control-sm mr-1 " id="inputemail" name="inputemail" placeholder="Enter Roll No."> 
                             </div>
                             <div class="form-group col-sm-4">
                                 <label class="sr-only" for="inputpass">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="inputpass" name="inputpass" placeholder="Password"> 
+                                <input type="password" class="form-control form-control-sm mr-1" id="inputpass" name="inputpass" placeholder="Password">
 							</div>
                             <div class="col-sm-auto">
                                 <div class="form-check" >
@@ -60,9 +65,9 @@
 						</div>
                         <div class="form-row">
                             <button type="button" class="btn btn-danger btn-md ml-auto" data-dismiss="modal" >Cancel</button>
-                            <button type="button" class="btn btn-dark btn-md ml-1" onClick="validatte()" id="log">Login</button>
-						</div>
-						<hr>
+                            <button type="button" class="btn btn-dark btn-md ml-1" onclick="validatte();" id="log">Login</button>
+                        </div>
+                        <hr>
 						<small class="text-center"><strong>Note:</strong> Please enter correct details for better result !!</small>
                     </form>
                 </div>
@@ -70,11 +75,54 @@
         </div>
     </div>
 
-	<script src="JS/jquery.slim.min.js"></script>
-    <script src="JS/popper.min.js"></script>
-    <script src="JS/bootstrap.min.js"></script>
-    <script src="JS/scripts.js"></script>
-    <script src="JS/functionality.js"></script>
+    <div id="registeration" class="modal fade appearance" role="dialog">
+        <div class="modal-dialog modal-lg "  role="content">
+            <div class="modal-content">
+                <div class="modal-header text modal_back">
+                    <h4 class="modal-title">Register</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="inputroll">Roll No.</label>
+                                <input type="text" class="form-control form-control-sm mr-1 " id="inputroll" name="inputroll" placeholder="Enter Roll No."> 
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="inputpassr">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="inputpassr" name="inputpassr" placeholder="Password">
+							</div>
+                            <div class=" form-group col-sm-auto">
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4"></div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="confirmpass">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="confirmpass" name="confirmpass" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-danger btn-md ml-auto" data-dismiss="modal" >Cancel</button>
+                            <button type="button" class="btn btn-dark btn-md ml-1" onclick="validatte_registration();" id="log">Register</button>
+                        </div>
+                        <hr>
+						<small class="text-center"><strong>Note:</strong> Please enter correct details for better result !!</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/functionality.js"></script>
+    <script src="js/indicator.js"></script>
+
 </body>
 	
 </html>
